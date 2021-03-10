@@ -27,7 +27,10 @@ docker run --rm --init -p 127.0.0.1:8070:8070 -p 127.0.0.1:8071:8071 ucrel/grobi
 To run restricting the amount of overall memory Docker will use, in this case 5GB, and the amound of memory the `pdf2xml` tool will use, in this case 4GB, within the Grobid server run the following:
 
 ``` bash
-docker run --rm --init -p 127.0.0.1:8070:8070 -p 127.0.0.1:8071:8071 --memory=5g --memory-swap=5g --env grobid__3rdparty__pdf2xml__memory__limit__mb=4000 ucrel/grobid:0.6.1
+docker run --rm --init -p 127.0.0.1:8070:8070 -p 127.0.0.1:8071:8071 \
+           --memory=5g --memory-swap=5g \
+           --env grobid__3rdparty__pdf2xml__memory__limit__mb=4000 \
+           ucrel/grobid:0.6.1
 ```
 
 ## What is Grobid
