@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  grobid:
+    image: ucrel/grobid:0.6.1
+    init: true
+    ports:
+      - "127.0.0.1:8070:8070"
+      - "127.0.0.1:8071:8071"
+    environment:
+      - grobid__3rdparty__pdf2xml__memory__limit__mb=4000
+    deploy:
+      resources:
+        limits:
+          cpus: "4"
+          memory: "5000mb"
