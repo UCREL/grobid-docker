@@ -2,7 +2,7 @@
 
 Currently works with Grobid version:
 
-1. 0.6.1
+* 0.6.1
 
 Each docker tag is associated with the version of Grobid it was built with e.g. `ucrel/grobid:0.6.1` means that it was built with version `0.6.1`
 
